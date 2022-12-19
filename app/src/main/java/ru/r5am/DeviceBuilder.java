@@ -8,6 +8,9 @@ public interface DeviceBuilder {
     // Монтаж корпуса
     public DeviceBuilder chassisAssembly();
 
+    // Установка блока питания
+    public DeviceBuilder powerMounting();
+
     // Установка экрана
     public DeviceBuilder screenMounting();
 
@@ -24,6 +27,6 @@ public interface DeviceBuilder {
     public DeviceBuilder ramMounting();
 
     // Выпуск устройства
-    public Device build();
+    public Device deviceGet();
 
 }

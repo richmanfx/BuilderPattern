@@ -17,7 +17,7 @@ public class Device {
     @Getter @Setter private String ram;             // Оперативная память
 
     /**
-     * Проверить качество
+     * Проверить качество (валидность) устройства
      */
      public boolean qualityCheck() {
          return (chassis != null && !chassis.trim().isEmpty()) &&
