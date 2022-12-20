@@ -42,7 +42,6 @@ public class App {
             System.out.printf("\n%s", device);
         }
 
-
     }
 
 }
