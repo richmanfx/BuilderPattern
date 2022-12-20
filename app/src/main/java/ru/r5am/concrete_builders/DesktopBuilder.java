@@ -66,4 +66,5 @@ public class DesktopBuilder implements DeviceBuilder {
         Device device = new Device();
         return device;
     }
+
 }

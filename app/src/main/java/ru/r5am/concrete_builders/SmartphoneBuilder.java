@@ -4,9 +4,9 @@ import ru.r5am.Device;
 import ru.r5am.DeviceBuilder;
 
 /**
- * Строитель для ноутбука
+ * Строитель для смартфона
  */
-public class NotebookBuilder implements DeviceBuilder {
+public class SmartphoneBuilder implements DeviceBuilder {
 
     private String chassis;         // Корпус
     // Блока питания нет - внешний
@@ -18,48 +18,48 @@ public class NotebookBuilder implements DeviceBuilder {
 
     @Override
     public DeviceBuilder chassisAssembly() {
-        System.out.println("Сборка корпуса для ноутбука");
-        this.chassis = "Notebook chassis";
+        System.out.println("Сборка корпуса для смартфона");
+        this.chassis = "Smartphone chassis";
         return this;
     }
 
     @Override
-    public DeviceBuilder powerMounting() {      // Блока питания нет - внешний
+    public DeviceBuilder powerMounting() {
         return null;
     }
 
     @Override
     public DeviceBuilder screenMounting() {
-        System.out.println("Установка экрана ноутбука");
-        this.screen = "Notebook screen";
+        System.out.println("Установка экрана смартфона");
+        this.screen = "Smartphone screen";
         return this;
     }
 
     @Override
     public DeviceBuilder keyboardMounting() {
-        System.out.println("Установка клавиатуры ноутбука");
-        this.keyboard = "Notebook keyboard";
+        System.out.println("Установка клавиатуры смартфона");
+        this.keyboard = "Smartphone keyboard";
         return this;
     }
 
     @Override
     public DeviceBuilder motherboardMounting() {
-        System.out.println("Установка материнской платы ноутбука");
-        this.motherboard = "Notebook motherboard";
+        System.out.println("Установка материнской платы смартфона");
+        this.motherboard = "Smartphone motherboard";
         return this;
     }
 
     @Override
     public DeviceBuilder cpuMounting() {
-        System.out.println("Установка процессора ноутбука");
-        this.cpu = "Notebook CPU";
+        System.out.println("Установка процессора смартфона");
+        this.cpu = "Smartphone CPU";
         return this;
     }
 
     @Override
     public DeviceBuilder ramMounting() {
-        System.out.println("Установка ОЗУ в ноутбук");
-        this.ram = "Notebook RAM";
+        System.out.println("Установка ОЗУ в смартфон");
+        this.ram = "Smartphone RAM";
         return this;
     }
 

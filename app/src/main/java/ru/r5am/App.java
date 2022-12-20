@@ -5,7 +5,7 @@ package ru.r5am;
 
 public class App {
     public String getGreeting() {
-        return "Hello World!";
+        return "Привет, Builder!";
     }
 
     public static void main(String[] args) {
