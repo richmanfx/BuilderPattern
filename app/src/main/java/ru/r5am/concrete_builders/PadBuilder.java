@@ -4,9 +4,9 @@ import ru.r5am.Device;
 import ru.r5am.DeviceBuilder;
 
 /**
- * Строитель для смартфона
+ * Строитель для планшета
  */
-public class SmartphoneBuilder implements DeviceBuilder {
+public class PadBuilder implements DeviceBuilder {
 
     private String chassis;         // Корпус
                                     // Блока питания нет - внешний
@@ -18,8 +18,8 @@ public class SmartphoneBuilder implements DeviceBuilder {
 
     @Override
     public DeviceBuilder chassisAssembly() {
-        System.out.println("Сборка корпуса для смартфона");
-        this.chassis = "Smartphone chassis";
+        System.out.println("Сборка корпуса для планшета");
+        this.chassis = "Pad chassis";
         return this;
     }
 
@@ -30,8 +30,8 @@ public class SmartphoneBuilder implements DeviceBuilder {
 
     @Override
     public DeviceBuilder screenMounting() {
-        System.out.println("Установка экрана смартфона");
-        this.screen = "Smartphone screen";
+        System.out.println("Установка экрана планшета");
+        this.screen = "Pad screen";
         return this;
     }
 
@@ -42,22 +42,22 @@ public class SmartphoneBuilder implements DeviceBuilder {
 
     @Override
     public DeviceBuilder motherboardMounting() {
-        System.out.println("Установка материнской платы смартфона");
-        this.motherboard = "Smartphone motherboard";
+        System.out.println("Установка материнской платы планшета");
+        this.motherboard = "Pad motherboard";
         return this;
     }
 
     @Override
     public DeviceBuilder cpuMounting() {
-        System.out.println("Установка процессора смартфона");
-        this.cpu = "Smartphone CPU";
+        System.out.println("Установка процессора планшета");
+        this.cpu = "Pad CPU";
         return this;
     }
 
     @Override
     public DeviceBuilder ramMounting() {
-        System.out.println("Установка ОЗУ в смартфон");
-        this.ram = "Smartphone RAM";
+        System.out.println("Установка ОЗУ в планшет");
+        this.ram = "Pad RAM";
         return this;
     }
 
