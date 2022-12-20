@@ -11,7 +11,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        System.out.println("\nПривет, Builder!\n");
+        System.out.println("\n==========================\nРаботает паттерн 'Builder'\n");
 
         // Партия компьютерных устройств
         ArrayList<Device> devicesShipment = new ArrayList<>();
