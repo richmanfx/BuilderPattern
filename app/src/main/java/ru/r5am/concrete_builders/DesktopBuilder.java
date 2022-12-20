@@ -10,8 +10,6 @@ public class DesktopBuilder implements DeviceBuilder {
 
     private String chassis;         // Корпус
     private String power;           // Блок питания
-                                    // Экрана нет
-                                    // Клавиатуры нет
     private String motherboard;     // Материнская плата
     private String cpu;             // Процессор
     private String ram;             // Оперативная память
@@ -32,12 +30,12 @@ public class DesktopBuilder implements DeviceBuilder {
 
     @Override
     public DeviceBuilder screenMounting() {     // Экрана нет
-        return null;
+        return this;
     }
 
     @Override
     public DeviceBuilder keyboardMounting() {       // Клавиатуры нет
-        return null;
+        return this;
     }
 
     @Override
@@ -62,8 +60,14 @@ public class DesktopBuilder implements DeviceBuilder {
     }
 
     @Override
-    public Device deviceGet() {
-        Device device = new Device();
+    public Device build() {
+        Device device = new Device(chassis, power, null, null, motherboard, cpu, ram);
+        if (device.qualityCheck()) {        // Если десктоп соответствует требованиям
+            System.out.println("=> Десктоп соответствует требованиям\n");
+        } else {
+            System.out.println("=> Десктоп не соответствует требованиям\n");
+            System.exit(0);
+        }
         return device;
     }
 

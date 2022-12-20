@@ -17,6 +17,22 @@ public class Device {
     @Getter @Setter private String ram;             // Оперативная память
 
     /**
+     * Один конструктор - будут вызовы в null-ами. Можно наделать конструкторов на все комбинации параметров.
+     */
+    public Device(String chassis, String power, String screen, String keyboard, String motherboard,
+                  String cpu, String ram) {
+
+        this.chassis = chassis;
+        this.power = power;
+        this.screen = screen;
+        this.keyboard = keyboard;
+        this.motherboard = motherboard;
+        this.cpu = cpu;
+        this.ram = ram;
+
+    }
+
+    /**
      * Проверить качество (валидность) устройства
      */
      public boolean qualityCheck() {
@@ -29,13 +45,13 @@ public class Device {
     @Override
     public String toString() {
         return "Device:" +
-                " chassis=" + chassis +
-                " power=" + power +
-                " screen=" + screen +
-                " keyboard=" + keyboard +
-                " motherboard=" + motherboard +
-                " cpu=" + cpu +
-                " ram=" + ram;
+                " chassis='" + chassis + "'," +
+                " power='" + power + "'," +
+                " screen='" + screen + "'," +
+                " keyboard='" + keyboard + "'," +
+                " motherboard='" + motherboard + "'," +
+                " cpu='" + cpu + "'," +
+                " ram='" + ram+ "'." ;
     }
 
 }

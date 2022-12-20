@@ -25,7 +25,7 @@ public class NotebookBuilder implements DeviceBuilder {
 
     @Override
     public DeviceBuilder powerMounting() {      // Блока питания нет - внешний
-        return null;
+        return this;
     }
 
     @Override
@@ -64,8 +64,14 @@ public class NotebookBuilder implements DeviceBuilder {
     }
 
     @Override
-    public Device deviceGet() {
-        Device device = new Device();
+    public Device build() {
+        Device device = new Device(chassis, null, screen, keyboard, motherboard, cpu, ram);
+        if (device.qualityCheck()) {        // Если ноутбук соответствует требованиям
+            System.out.println("=> Ноутбук соответствует требованиям\n");
+        } else {
+            System.out.println("=> Ноутбук не соответствует требованиям\n");
+            System.exit(0);
+        }
         return device;
     }
 

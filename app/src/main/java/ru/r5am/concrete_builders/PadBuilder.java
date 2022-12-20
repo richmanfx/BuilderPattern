@@ -25,7 +25,7 @@ public class PadBuilder implements DeviceBuilder {
 
     @Override
     public DeviceBuilder powerMounting() {
-        return null;
+        return this;
     }
 
     @Override
@@ -37,7 +37,7 @@ public class PadBuilder implements DeviceBuilder {
 
     @Override
     public DeviceBuilder keyboardMounting() {
-        return null;
+        return this;
     }
 
     @Override
@@ -62,8 +62,14 @@ public class PadBuilder implements DeviceBuilder {
     }
 
     @Override
-    public Device deviceGet() {
-        Device device = new Device();
+    public Device build() {
+        Device device = new Device(chassis, null, screen, null, motherboard, cpu, ram);
+        if (device.qualityCheck()) {        // Если планшет соответствует требованиям
+            System.out.println("=> Планшет соответствует требованиям\n");
+        } else {
+            System.out.println("=> Планшет не соответствует требованиям\n");
+            System.exit(0);
+        }
         return device;
     }
 

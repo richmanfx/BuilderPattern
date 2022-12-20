@@ -6,27 +6,27 @@ package ru.r5am;
 public interface DeviceBuilder {
 
     // Монтаж корпуса
-    public DeviceBuilder chassisAssembly();
+    DeviceBuilder chassisAssembly();
 
     // Установка блока питания
-    public DeviceBuilder powerMounting();
+    DeviceBuilder powerMounting();
 
     // Установка экрана
-    public DeviceBuilder screenMounting();
+    DeviceBuilder screenMounting();
 
     // Установка клавиатуры
-    public DeviceBuilder keyboardMounting();
+    DeviceBuilder keyboardMounting();
 
     // Установка материнской платы
-    public DeviceBuilder motherboardMounting();
+    DeviceBuilder motherboardMounting();
 
     // Установка процессора
-    public DeviceBuilder cpuMounting();
+    DeviceBuilder cpuMounting();
 
     // Установка оперативной памяти
-    public DeviceBuilder ramMounting();
+    DeviceBuilder ramMounting();
 
     // Выпуск устройства
-    public Device deviceGet();
+    Device build();
 
 }
